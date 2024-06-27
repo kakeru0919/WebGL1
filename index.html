@@ -135,6 +135,13 @@
         var fruit = new THREE.Mesh( fruit_g, material_r);
         fruit.position.set(0,1,0);
 
+        //枝の作成
+        var branch_g = new THREE.CylinderGeometry( 0.15, 0.1, 0.6, 32 );
+        var material_b = new THREE.MeshLambertMaterial({ color: 0x734E30 });
+        var branch = new THREE.Mesh( branch_g, material_g);
+        branch.position.set(0,1.7,0);
+
+
         /*
         //ペンギンのオブジェクト
         const pengin = new THREE.Group();
@@ -154,6 +161,7 @@
         //リンゴのオブジェクト
         const apple = new THREE.Group();
         apple.add(fruit);//実を追加
+        apple.add(branch);//枝を追加
         apple.position.set(0,0,0);
 
         
