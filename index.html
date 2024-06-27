@@ -141,6 +141,14 @@
         var branch = new THREE.Mesh( branch_g, material_b);
         branch.position.set(0,1.7,0);
 
+         //葉の作成
+        var leaf_g = new THREE.CylinderGeometry( 1, 1, 0.05, 32 );
+        var material_g = new THREE.MeshLambertMaterial({ color: 0x005731 });
+        var leaf = new THREE.Mesh( leaf_g, material_g);
+        leaf.scale.x = 2;
+        leaf.rotation.x = 1.57;
+        leaf.position.set(0,3,0);
+
 
         /*
         //ペンギンのオブジェクト
@@ -162,6 +170,7 @@
         const apple = new THREE.Group();
         apple.add(fruit);//実を追加
         apple.add(branch);//枝を追加
+        apple.add(leaf);//葉を追加
         apple.position.set(0,0,0);
 
         
